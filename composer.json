@@ -57,5 +57,14 @@
   },
   "support": {
     "docs": "https://github.com/helturky/php-arud/tree/main/docs"
+  },
+  "archive": {
+    "exclude": [
+      "/.github/",
+      "/.phpunit.cache/",
+      "/coverage/",
+      "/reports/",
+      "/tools/validate-reference-corpus.php"
+    ]
   }
 }
