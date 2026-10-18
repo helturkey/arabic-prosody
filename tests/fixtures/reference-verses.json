@@ -1,0 +1,927 @@
+{
+  "schema_version": 2,
+  "description": "Regression corpus of fully vocalized classical/public-domain verses. NOT an expert-reviewed gold standard: every record is review_status=unreviewed. Provenance is recorded per record; see docs/CORPUS.md for the review protocol. The 100 additions are source-attributed candidates and require local PHP Analyzer regression verification before replacing the strict fixture. Extended by 100 source-attributed records in reference-verses.additions-100.verified.json; strict classification was checked with the shipped PHP Analyzer. All records remain unreviewed.",
+  "records": [
+    {
+      "id": "imru-al-qays-muallaqa-1",
+      "meter": "tawil",
+      "poet": "امرؤ القيس",
+      "sadr": "قِفَا نَبْكِ مِنْ ذِكْرَى حَبِيبٍ وَمَنْزِلِ",
+      "ajuz": "بِسِقْطِ اللِّوَى بَيْنَ الدَّخُولِ فَحَوْمَلِ",
+      "opening_verse": false
+    },
+    {
+      "id": "imru-al-qays-muallaqa-2",
+      "meter": "tawil",
+      "poet": "امرؤ القيس",
+      "sadr": "فَتُوضِحَ فَالْمِقْرَاةِ لَمْ يَعْفُ رَسْمُهَا",
+      "ajuz": "لِمَا نَسَجَتْهَا مِنْ جَنُوبٍ وَشَمْأَلِ",
+      "opening_verse": false
+    },
+    {
+      "id": "shabbi-irada-alhayat",
+      "meter": "mutaqarib",
+      "poet": "أبو القاسم الشابي",
+      "sadr": "إِذَا الشَّعْبُ يَوْمًا أَرَادَ الْحَيَاةَ",
+      "ajuz": "فَلَا بُدَّ أَنْ يَسْتَجِيبَ الْقَدَرْ",
+      "opening_verse": false
+    },
+    {
+      "id": "mutanabbi-gharama",
+      "meter": "wafir",
+      "poet": "المتنبي",
+      "sadr": "إِذَا غَامَرْتَ فِي شَرَفٍ مَرُومِ",
+      "ajuz": "فَلَا تَقْنَعْ بِمَا دُونَ النُّجُومِ",
+      "opening_verse": false
+    },
+    {
+      "id": "antara-muallaqa-1",
+      "meter": "kamil",
+      "poet": "عنترة بن شداد",
+      "sadr": "هَلْ غَادَرَ الشُّعَرَاءُ مِنْ مُتَرَدَّمِ",
+      "ajuz": "أَمْ هَلْ عَرَفْتَ الدَّارَ بَعْدَ تَوَهُّمِ",
+      "opening_verse": false
+    },
+    {
+      "id": "shabbi-akhy",
+      "meter": "mutaqarib",
+      "poet": "أبو القاسم الشابي",
+      "sadr": "أَخِي جَاوَزَ الظَّالِمُونَ الْمَدَى",
+      "ajuz": "فَحَقَّ الْجِهَادُ وَحَقَّ الْفِدَا",
+      "opening_verse": false
+    },
+    {
+      "id": "imru-al-qays-layl",
+      "meter": "tawil",
+      "poet": "امرؤ القيس",
+      "sadr": "وَلَيْلٍ كَمَوْجِ الْبَحْرِ أَرْخَى سُدُولَهُ",
+      "ajuz": "عَلَيَّ بِأَنْوَاعِ الْهُمُومِ لِيَبْتَلِي",
+      "opening_verse": false
+    },
+    {
+      "id": "bilal-fakhkh",
+      "meter": "tawil",
+      "poet": "منسوب إلى بلال بن رباح",
+      "sadr": "أَلَا لَيْتَ شِعْرِي هَلْ أَبِيتَنَّ لَيْلَةً",
+      "ajuz": "بِفَخٍّ وَحَوْلِي إِذْخِرٌ وَجَلِيلُ",
+      "opening_verse": false
+    },
+    {
+      "id": "jarir-uyun",
+      "meter": "basit",
+      "poet": "جرير",
+      "sadr": "إِنَّ الْعُيُونَ الَّتِي فِي طَرْفِهَا حَوَرٌ",
+      "ajuz": "قَتَلْنَنَا ثُمَّ لَمْ يُحْيِينَ قَتْلَانَا",
+      "opening_verse": false
+    },
+    {
+      "id": "abu-tammam-sayf",
+      "meter": "basit",
+      "poet": "أبو تمام",
+      "sadr": "السَّيْفُ أَصْدَقُ إِنْبَاءً مِنَ الْكُتُبِ",
+      "ajuz": "فِي حَدِّهِ الْحَدُّ بَيْنَ الْجِدِّ وَاللَّعِبِ",
+      "opening_verse": false
+    },
+    {
+      "id": "anon-gharib",
+      "meter": "basit",
+      "poet": "علي بن الحسين (زين العابدين)",
+      "sadr": "لَيْسَ الْغَرِيبُ غَرِيبَ الشَّأْمِ وَالْيَمَنِ",
+      "ajuz": "إِنَّ الْغَرِيبَ غَرِيبُ اللَّحْدِ وَالْكَفَنِ",
+      "opening_verse": false,
+      "source_url": "https://www.aldiwan.net/poem99716.html"
+    },
+    {
+      "id": "anon-inaya",
+      "meter": "kamil",
+      "poet": "عمر اليافي",
+      "sadr": "وَإِذَا الْعِنَايَةُ لَاحَظَتْكَ عُيُونُهَا",
+      "ajuz": "لَا تَخْشَ مِنْ بَأْسٍ فَأَنْتَ تُصَانُ",
+      "opening_verse": false
+    },
+    {
+      "id": "shawqi-muallim",
+      "meter": "kamil",
+      "poet": "أحمد شوقي",
+      "sadr": "قُمْ لِلْمُعَلِّمِ وَفِّهِ التَّبْجِيلَا",
+      "ajuz": "كَادَ الْمُعَلِّمُ أَنْ يَكُونَ رَسُولَا",
+      "opening_verse": true
+    },
+    {
+      "id": "anon-tamanni",
+      "meter": "wafir",
+      "poet": "أحمد شوقي",
+      "sadr": "وَمَا نَيْلُ الْمَطَالِبِ بِالتَّمَنِّي",
+      "ajuz": "وَلَكِنْ تُؤْخَذُ الدُّنْيَا غِلَابَا",
+      "opening_verse": false
+    },
+    {
+      "id": "anon-saqi",
+      "meter": "ramal",
+      "poet": "ابن زهر الحفيد",
+      "sadr": "أَيُّهَا السَّاقِي إِلَيْكَ الْمُشْتَكَى",
+      "ajuz": "قَدْ دَعَوْنَاكَ وَإِنْ لَمْ تَسْمَعِ",
+      "opening_verse": false
+    },
+    {
+      "id": "imru-al-qays-muallaqa-extra-02",
+      "meter": "tawil",
+      "poet": "امرؤ القيس",
+      "sadr": "كَأَنِّي غَدَاةَ الْبَيْنِ يَوْمَ تَحَمَّلُوا",
+      "ajuz": "لَدَى سَمُرَاتِ الْحَيِّ نَاقِفُ حَنْظَلِ",
+      "opening_verse": false
+    },
+    {
+      "id": "imru-al-qays-muallaqa-extra-03",
+      "meter": "tawil",
+      "poet": "امرؤ القيس",
+      "sadr": "وُقُوفًا بِهَا صَحْبِي عَلَيَّ مَطِيَّهُمْ",
+      "ajuz": "يَقُولُونَ لَا تَهْلِكْ أَسًى وَتَجَمَّلِ",
+      "opening_verse": false
+    },
+    {
+      "id": "imru-al-qays-muallaqa-extra-05",
+      "meter": "tawil",
+      "poet": "امرؤ القيس",
+      "sadr": "كَدَأْبِكَ مِنْ أُمِّ الْحُوَيْرِثِ قَبْلَهَا",
+      "ajuz": "وَجَارَتِهَا أُمِّ الرَّبَابِ بِمَأْسَلِ",
+      "opening_verse": false
+    },
+    {
+      "id": "imru-al-qays-muallaqa-extra-06",
+      "meter": "tawil",
+      "poet": "امرؤ القيس",
+      "sadr": "إِذَا قَامَتَا تَضَوَّعَ الْمِسْكُ مِنْهُمَا",
+      "ajuz": "نَسِيمَ الصَّبَا جَاءَتْ بِرَيَّا الْقَرَنْفُلِ",
+      "opening_verse": false
+    },
+    {
+      "id": "imru-al-qays-muallaqa-extra-07",
+      "meter": "tawil",
+      "poet": "امرؤ القيس",
+      "sadr": "فَفَاضَتْ دُمُوعُ الْعَيْنِ مِنِّي صَبَابَةً",
+      "ajuz": "عَلَى النَّحْرِ حَتَّى بَلَّ دَمْعِيَ مِحْمَلِي",
+      "opening_verse": false
+    },
+    {
+      "id": "imru-al-qays-muallaqa-extra-08",
+      "meter": "tawil",
+      "poet": "امرؤ القيس",
+      "sadr": "أَلَا رُبَّ يَوْمٍ لَكَ مِنْهُنَّ صَالِحٍ",
+      "ajuz": "وَلَا سِيَّمَا يَوْمٌ بِدَارَةِ جُلْجُلِ",
+      "opening_verse": false
+    },
+    {
+      "id": "imru-al-qays-muallaqa-extra-09",
+      "meter": "tawil",
+      "poet": "امرؤ القيس",
+      "sadr": "وَيَوْمَ عَقَرْتُ لِلْعَذَارَى مَطِيَّتِي",
+      "ajuz": "فَيَا عَجَبًا مِنْ كَوْرِهَا الْمُتَحَمَّلِ",
+      "opening_verse": false
+    },
+    {
+      "id": "imru-al-qays-muallaqa-extra-10",
+      "meter": "tawil",
+      "poet": "امرؤ القيس",
+      "sadr": "فَظَلَّ الْعَذَارَى يَرْتَمِينَ بِلَحْمِهَا",
+      "ajuz": "وَشَحْمٍ كَهُدَّابِ الدِّمَقْسِ الْمُفَتَّلِ",
+      "opening_verse": false
+    },
+    {
+      "id": "imru-al-qays-muallaqa-extra-11",
+      "meter": "tawil",
+      "poet": "امرؤ القيس",
+      "sadr": "وَيَوْمَ دَخَلْتُ الْخِدْرَ خِدْرَ عُنَيْزَةٍ",
+      "ajuz": "فَقَالَتْ لَكَ الْوَيْلَاتُ إِنَّكَ مُرْجِلِي",
+      "opening_verse": false
+    },
+    {
+      "id": "imru-al-qays-muallaqa-extra-12",
+      "meter": "tawil",
+      "poet": "امرؤ القيس",
+      "sadr": "تَقُولُ وَقَدْ مَالَ الْغَبِيطُ بِنَا مَعًا",
+      "ajuz": "عَقَرْتَ بَعِيرِي يَا امْرَأَ الْقَيْسِ فَانْزِلِ",
+      "opening_verse": false
+    },
+    {
+      "id": "imru-al-qays-muallaqa-extra-13",
+      "meter": "tawil",
+      "poet": "امرؤ القيس",
+      "sadr": "فَقُلْتُ لَهَا سِيرِي وَأَرْخِي زِمَامَهُ",
+      "ajuz": "وَلَا تُبْعِدِينِي مِنْ جَنَاكِ الْمُعَلَّلِ",
+      "opening_verse": false
+    },
+    {
+      "id": "imru-al-qays-muallaqa-extra-14",
+      "meter": "tawil",
+      "poet": "امرؤ القيس",
+      "sadr": "فَمِثْلِكِ حُبْلَى قَدْ طَرَقْتُ وَمُرْضِعٍ",
+      "ajuz": "فَأَلْهَيْتُهَا عَنْ ذِي تَمَائِمَ مُحْوِلِ",
+      "opening_verse": false
+    },
+    {
+      "id": "imru-al-qays-muallaqa-extra-15",
+      "meter": "tawil",
+      "poet": "امرؤ القيس",
+      "sadr": "إِذَا مَا بَكَى مِنْ خَلْفِهَا انْصَرَفَتْ لَهُ",
+      "ajuz": "بِشِقٍّ وَتَحْتِي شِقُّهَا لَمْ يُحَوَّلِ",
+      "opening_verse": false
+    },
+    {
+      "id": "imru-al-qays-muallaqa-extra-16",
+      "meter": "tawil",
+      "poet": "امرؤ القيس",
+      "sadr": "وَتَعْطُو بِرَخْصٍ غَيْرَ شَثْنٍ كَأَنَّهُ",
+      "ajuz": "أَسَارِيعُ ظَبْيٍ أَوْ مَسَاوِيكُ إِسْحِلِ",
+      "opening_verse": false
+    },
+    {
+      "id": "imru-al-qays-muallaqa-extra-17",
+      "meter": "tawil",
+      "poet": "امرؤ القيس",
+      "sadr": "إِلَى مِثْلِهَا يَرْنُو الْحَلِيمُ صَبَابَةً",
+      "ajuz": "إِذَا مَا اسْبَكَرَّتْ بَيْنَ دِرْعٍ وَمِجْوَلِ",
+      "opening_verse": false
+    },
+    {
+      "id": "abu-firas-arak-asi-02",
+      "meter": "tawil",
+      "poet": "أبو فراس الحمداني",
+      "sadr": "إِذَا اللَّيْلُ أَضْوَانِي بَسَطْتُ يَدَ الْهَوَى",
+      "ajuz": "وَأَذْلَلْتُ دَمْعًا مِنْ خَلَائِقِهِ الْكِبْرُ",
+      "opening_verse": false
+    },
+    {
+      "id": "abu-firas-arak-asi-03",
+      "meter": "tawil",
+      "poet": "أبو فراس الحمداني",
+      "sadr": "تَكَادُ تُضِيءُ النَّارُ بَيْنَ جَوَانِحِي",
+      "ajuz": "إِذَا هِيَ أَذْكَتْهَا الصَّبَابَةُ وَالْفِكْرُ",
+      "opening_verse": false
+    },
+    {
+      "id": "abu-firas-arak-asi-04",
+      "meter": "tawil",
+      "poet": "أبو فراس الحمداني",
+      "sadr": "مُعَلِّلَتِي بِالْوَصْلِ وَالْمَوْتُ دُونَهُ",
+      "ajuz": "إِذَا مِتُّ ظَمْآنًا فَلَا نَزَلَ الْقَطْرُ",
+      "opening_verse": false
+    },
+    {
+      "id": "abu-firas-arak-asi-05",
+      "meter": "tawil",
+      "poet": "أبو فراس الحمداني",
+      "sadr": "حَفِظْتُ وَضَيَّعْتِ الْمَوَدَّةَ بَيْنَنَا",
+      "ajuz": "وَأَحْسَنُ مِنْ بَعْضِ الْوَفَاءِ لَكِ الْعُذْرُ",
+      "opening_verse": false
+    },
+    {
+      "id": "abu-firas-arak-asi-07",
+      "meter": "tawil",
+      "poet": "أبو فراس الحمداني",
+      "sadr": "بِنَفْسِي مِنَ الْغَادِينَ فِي الْحَيِّ غَادَةٌ",
+      "ajuz": "هَوَايَ لَهَا ذَنْبٌ وَبَهْجَتُهَا عُذْرُ",
+      "opening_verse": false
+    },
+    {
+      "id": "abu-firas-arak-asi-09",
+      "meter": "tawil",
+      "poet": "أبو فراس الحمداني",
+      "sadr": "بَدَوْتُ وَأَهْلِي حَاضِرُونَ لِأَنَّنِي",
+      "ajuz": "أَرَى أَنَّ دَارًا لَسْتُ مِنْ أَهْلِهَا قَفْرُ",
+      "opening_verse": false
+    },
+    {
+      "id": "abu-firas-arak-asi-10",
+      "meter": "tawil",
+      "poet": "أبو فراس الحمداني",
+      "sadr": "وَحَارَبْتُ قَوْمِي فِي هَوَاكِ وَإِنَّهُمْ",
+      "ajuz": "وَإِيَّايَ لَوْلَا حُبُّكِ الْمَاءُ وَالْخَمْرُ",
+      "opening_verse": false
+    },
+    {
+      "id": "abu-firas-arak-asi-11",
+      "meter": "tawil",
+      "poet": "أبو فراس الحمداني",
+      "sadr": "فَإِنْ يَكُ مَا قَالَ الْوُشَاةُ وَلَمْ يَكُنْ",
+      "ajuz": "فَقَدْ يَهْدِمُ الْإِيمَانُ مَا شَيَّدَ الْكُفْرُ",
+      "opening_verse": false
+    },
+    {
+      "id": "abu-firas-arak-asi-12",
+      "meter": "tawil",
+      "poet": "أبو فراس الحمداني",
+      "sadr": "وَفَيْتُ وَفِي بَعْضِ الْوَفَاءِ مَذَلَّةٌ",
+      "ajuz": "لِآنِسَةٍ فِي الْحَيِّ شِيمَتُهَا الْغَدْرُ",
+      "opening_verse": false
+    },
+    {
+      "id": "abu-firas-arak-asi-13",
+      "meter": "tawil",
+      "poet": "أبو فراس الحمداني",
+      "sadr": "وَقُورٌ وَرَيْعَانُ الصِّبَا يَسْتَفِزُّهَا",
+      "ajuz": "فَتَأْرَنُ أَحْيَانًا كَمَا أَرِنَ الْمُهْرُ",
+      "opening_verse": false
+    },
+    {
+      "id": "abu-firas-arak-asi-14",
+      "meter": "tawil",
+      "poet": "أبو فراس الحمداني",
+      "sadr": "فَقُلْتُ لَهَا لَوْ شِئْتِ لَمْ تَتَعَنَّتِي",
+      "ajuz": "وَلَمْ تَسْأَلِي عَنِّي وَعِنْدَكِ بِي خُبْرُ",
+      "opening_verse": false
+    },
+    {
+      "id": "abu-firas-arak-asi-15",
+      "meter": "tawil",
+      "poet": "أبو فراس الحمداني",
+      "sadr": "فَقَالَتْ لَقَدْ أَزْرَى بِكَ الدَّهْرُ بَعْدَنَا",
+      "ajuz": "فَقُلْتُ مَعَاذَ اللَّهِ بَلْ أَنْتِ لَا الدَّهْرُ",
+      "opening_verse": false
+    },
+    {
+      "id": "abu-firas-arak-asi-16",
+      "meter": "tawil",
+      "poet": "أبو فراس الحمداني",
+      "sadr": "وَمَا كَانَ لِلْأَحْزَانِ لَوْلَاكِ مَسْلَكٌ",
+      "ajuz": "إِلَى الْقَلْبِ لَكِنَّ الْهَوَى لِلْبِلَى جِسْرُ",
+      "opening_verse": false
+    },
+    {
+      "id": "mutanabbi-qadr-alazm-01",
+      "meter": "tawil",
+      "poet": "المتنبي",
+      "sadr": "وَتَعْظُمُ فِي عَيْنِ الصَّغِيرِ صِغَارُهَا",
+      "ajuz": "وَتَصْغُرُ فِي عَيْنِ الْعَظِيمِ الْعَظَائِمُ",
+      "opening_verse": false
+    },
+    {
+      "id": "mutanabbi-qadr-alazm-02",
+      "meter": "tawil",
+      "poet": "المتنبي",
+      "sadr": "يُكَلِّفُ سَيْفُ الدَّوْلَةِ الْجَيْشَ هَمَّهُ",
+      "ajuz": "وَقَدْ عَجَزَتْ عَنْهُ الْجُيُوشُ الْخَضَارِمُ",
+      "opening_verse": false
+    },
+    {
+      "id": "mutanabbi-qadr-alazm-03",
+      "meter": "tawil",
+      "poet": "المتنبي",
+      "sadr": "وَيَطْلُبُ عِنْدَ النَّاسِ مَا عِنْدَ نَفْسِهِ",
+      "ajuz": "وَذَلِكَ مَا لَا تَدَّعِيهِ الضَّرَاغِمُ",
+      "opening_verse": false
+    },
+    {
+      "id": "mutanabbi-qadr-alazm-04",
+      "meter": "tawil",
+      "poet": "المتنبي",
+      "sadr": "يُفَدِّي أَتَمُّ الطَّيْرِ عُمْرًا سِلَاحُهُ",
+      "ajuz": "نُسُورُ الْمَلَا أَحْدَاثُهَا وَالْقَشَاعِمُ",
+      "opening_verse": false
+    },
+    {
+      "id": "mutanabbi-qadr-alazm-06",
+      "meter": "tawil",
+      "poet": "المتنبي",
+      "sadr": "هَلِ الْحَدَثُ الْحَمْرَاءُ تَعْرِفُ لَوْنَهَا",
+      "ajuz": "وَتَعْلَمُ أَيُّ السَّاقِيَيْنِ الْغَمَائِمُ",
+      "opening_verse": false
+    },
+    {
+      "id": "mutanabbi-qadr-alazm-07",
+      "meter": "tawil",
+      "poet": "المتنبي",
+      "sadr": "سَقَتْهَا الْغَمَامُ الْغُرُّ قَبْلَ نُزُولِهِ",
+      "ajuz": "فَلَمَّا دَنَا مِنْهَا سَقَتْهَا الْجَمَاجِمُ",
+      "opening_verse": false
+    },
+    {
+      "id": "mutanabbi-qadr-alazm-08",
+      "meter": "tawil",
+      "poet": "المتنبي",
+      "sadr": "بَنَاهَا فَأَعْلَى وَالْقَنَا تَقْرَعُ الْقَنَا",
+      "ajuz": "وَمَوْجُ الْمَنَايَا حَوْلَهَا مُتَلَاطِمُ",
+      "opening_verse": false
+    },
+    {
+      "id": "mutanabbi-qadr-alazm-09",
+      "meter": "tawil",
+      "poet": "المتنبي",
+      "sadr": "وَكَانَ بِهَا مِثْلُ الْجُنُونِ فَأَصْبَحَتْ",
+      "ajuz": "وَمِنْ جُثَثِ الْقَتْلَى عَلَيْهَا تَمَائِمُ",
+      "opening_verse": false
+    },
+    {
+      "id": "mutanabbi-qadr-alazm-10",
+      "meter": "tawil",
+      "poet": "المتنبي",
+      "sadr": "طَرِيدَةُ دَهْرٍ سَاقَهَا فَرَدَدْتَهَا",
+      "ajuz": "عَلَى الدِّينِ بِالْخَطِّيِّ وَالدَّهْرُ رَاغِمُ",
+      "opening_verse": false
+    },
+    {
+      "id": "mutanabbi-qadr-alazm-11",
+      "meter": "tawil",
+      "poet": "المتنبي",
+      "sadr": "تُفِيتُ اللَّيَالِي كُلَّ شَيْءٍ أَخَذْتَهُ",
+      "ajuz": "وَهُنَّ لِمَا يَأْخُذْنَ مِنْكَ غَوَارِمُ",
+      "opening_verse": false
+    },
+    {
+      "id": "mutanabbi-qadr-alazm-12",
+      "meter": "tawil",
+      "poet": "المتنبي",
+      "sadr": "إِذَا كَانَ مَا تَنْوِيهِ فِعْلًا مُضَارِعًا",
+      "ajuz": "مَضَى قَبْلَ أَنْ تُلْقَى عَلَيْهِ الْجَوَازِمُ",
+      "opening_verse": false
+    },
+    {
+      "id": "mutanabbi-qadr-alazm-13",
+      "meter": "tawil",
+      "poet": "المتنبي",
+      "sadr": "وَقَدْ حَاكَمُوهَا وَالْمَنَايَا حَوَاكِمٌ",
+      "ajuz": "فَمَا مَاتَ مَظْلُومٌ وَلَا عَاشَ ظَالِمُ",
+      "opening_verse": false
+    },
+    {
+      "id": "amr-ibn-kulthum-muallaqa-01",
+      "meter": "wafir",
+      "poet": "عمرو بن كلثوم",
+      "sadr": "مُشَعْشَعَةً كَأَنَّ الْحُصَّ فِيهَا",
+      "ajuz": "إِذَا مَا الْمَاءُ خَالَطَهَا سَخِينَا",
+      "opening_verse": false
+    },
+    {
+      "id": "amr-ibn-kulthum-muallaqa-02",
+      "meter": "wafir",
+      "poet": "عمرو بن كلثوم",
+      "sadr": "تَجُورُ بِذِي اللُّبَانَةِ عَنْ هَوَاهُ",
+      "ajuz": "إِذَا مَا ذَاقَهَا حَتَّى يَلِينَا",
+      "opening_verse": false
+    },
+    {
+      "id": "amr-ibn-kulthum-muallaqa-04",
+      "meter": "wafir",
+      "poet": "عمرو بن كلثوم",
+      "sadr": "صَبَنْتِ الْكَأْسَ عَنَّا أُمَّ عَمْرٍو",
+      "ajuz": "وَكَانَ الْكَأْسُ مَجْرَاهَا الْيَمِينَا",
+      "opening_verse": false
+    },
+    {
+      "id": "amr-ibn-kulthum-muallaqa-05",
+      "meter": "wafir",
+      "poet": "عمرو بن كلثوم",
+      "sadr": "وَمَا شَرُّ الثَّلَاثَةِ أُمَّ عَمْرٍو",
+      "ajuz": "بِصَاحِبِكِ الَّذِي لَا تُصْبِحِينَا",
+      "opening_verse": false
+    },
+    {
+      "id": "amr-ibn-kulthum-muallaqa-06",
+      "meter": "wafir",
+      "poet": "عمرو بن كلثوم",
+      "sadr": "وَكَأْسٍ قَدْ شَرِبْتُ بِبَعْلَبَكٍّ",
+      "ajuz": "وَأُخْرَى فِي دِمَشْقَ وَقَاصِرِينَا",
+      "opening_verse": false
+    },
+    {
+      "id": "amr-ibn-kulthum-muallaqa-07",
+      "meter": "wafir",
+      "poet": "عمرو بن كلثوم",
+      "sadr": "وَإِنَّا سَوْفَ تُدْرِكُنَا الْمَنَايَا",
+      "ajuz": "مُقَدَّرَةً لَنَا وَمُقَدِّرِينَا",
+      "opening_verse": false
+    },
+    {
+      "id": "amr-ibn-kulthum-muallaqa-08",
+      "meter": "wafir",
+      "poet": "عمرو بن كلثوم",
+      "sadr": "قِفِي قَبْلَ التَّفَرُّقِ يَا ظَعِينَا",
+      "ajuz": "نُخَبِّرْكِ الْيَقِينَ وَتُخْبِرِينَا",
+      "opening_verse": false
+    },
+    {
+      "id": "amr-ibn-kulthum-muallaqa-09",
+      "meter": "wafir",
+      "poet": "عمرو بن كلثوم",
+      "sadr": "أَلَا أَبْلِغْ بَنِي الطَّمَّاحِ عَنَّا",
+      "ajuz": "وَدَعْمِيًّا فَكَيْفَ وَجَدْتُمُونَا",
+      "opening_verse": false
+    },
+    {
+      "id": "amr-ibn-kulthum-muallaqa-12",
+      "meter": "wafir",
+      "poet": "عمرو بن كلثوم",
+      "sadr": "أَلَا لَا يَجْهَلَنْ أَحَدٌ عَلَيْنَا",
+      "ajuz": "فَنَجْهَلَ فَوْقَ جَهْلِ الْجَاهِلِينَا",
+      "opening_verse": false
+    },
+    {
+      "id": "amr-ibn-kulthum-muallaqa-extra-01",
+      "meter": "wafir",
+      "poet": "عمرو بن كلثوم",
+      "sadr": "قِفِي نَسْأَلْكِ هَلْ أَحْدَثْتِ صَرْمًا",
+      "ajuz": "لِوَشْكِ الْبَيْنِ أَمْ خُنْتِ الْأَمِينَا",
+      "opening_verse": false
+    },
+    {
+      "id": "amr-ibn-kulthum-muallaqa-extra-02",
+      "meter": "wafir",
+      "poet": "عمرو بن كلثوم",
+      "sadr": "فَإِنَّ قَنَاتَنَا يَا عَمْرُو أَعْيَتْ",
+      "ajuz": "عَلَى الْأَعْدَاءِ قَبْلَكَ أَنْ تَلِينَا",
+      "opening_verse": false
+    },
+    {
+      "id": "amr-ibn-kulthum-muallaqa-extra-03",
+      "meter": "wafir",
+      "poet": "عمرو بن كلثوم",
+      "sadr": "عَشَوْزَنَةً إِذَا انْقَلَبَتْ أَرَنَّتْ",
+      "ajuz": "تَشُجُّ قَفَا الْمُثَقِّفِ وَالْجَبِينَا",
+      "opening_verse": false
+    },
+    {
+      "id": "antara-muallaqa-extra-01",
+      "meter": "kamil",
+      "poet": "عنترة بن شداد",
+      "sadr": "يَا دَارَ عَبْلَةَ بِالْجَوَاءِ تَكَلَّمِي",
+      "ajuz": "وَعِمِي صَبَاحًا دَارَ عَبْلَةَ وَاسْلَمِي",
+      "opening_verse": false
+    },
+    {
+      "id": "antara-muallaqa-extra-02",
+      "meter": "kamil",
+      "poet": "عنترة بن شداد",
+      "sadr": "فَوَقَفْتُ فِيهَا نَاقَتِي وَكَأَنَّهَا",
+      "ajuz": "فَدَنٌ لِأَقْضِيَ حَاجَةَ الْمُتَلَوِّمِ",
+      "opening_verse": false
+    },
+    {
+      "id": "antara-muallaqa-extra-03",
+      "meter": "kamil",
+      "poet": "عنترة بن شداد",
+      "sadr": "وَتَحُلُّ عَبْلَةُ بِالْجَوَاءِ وَأَهْلُنَا",
+      "ajuz": "بِالْحَزْنِ فَالصَّمَّانِ فَالْمُتَثَلَّمِ",
+      "opening_verse": false
+    },
+    {
+      "id": "antara-muallaqa-extra-04",
+      "meter": "kamil",
+      "poet": "عنترة بن شداد",
+      "sadr": "حُيِّيتَ مِنْ طَلَلٍ تَقَادَمَ عَهْدُهُ",
+      "ajuz": "أَقْوَى وَأَقْفَرَ بَعْدَ أُمِّ الْهَيْثَمِ",
+      "opening_verse": false
+    },
+    {
+      "id": "antara-muallaqa-extra-05",
+      "meter": "kamil",
+      "poet": "عنترة بن شداد",
+      "sadr": "حَلَّتْ بِأَرْضِ الزَّائِرِينَ فَأَصْبَحَتْ",
+      "ajuz": "عَسِرًا عَلَيَّ طِلَابُكِ ابْنَةَ مَخْرَمِ",
+      "opening_verse": false
+    },
+    {
+      "id": "antara-muallaqa-extra-06",
+      "meter": "kamil",
+      "poet": "عنترة بن شداد",
+      "sadr": "عُلِّقْتُهَا عَرَضًا وَأَقْتُلُ قَوْمَهَا",
+      "ajuz": "زَعْمًا لَعَمْرُ أَبِيكَ لَيْسَ بِمَزْعَمِ",
+      "opening_verse": false
+    },
+    {
+      "id": "antara-muallaqa-extra-07",
+      "meter": "kamil",
+      "poet": "عنترة بن شداد",
+      "sadr": "وَلَقَدْ نَزَلْتِ فَلَا تَظُنِّي غَيْرَهُ",
+      "ajuz": "مِنِّي بِمَنْزِلَةِ الْمُحِبِّ الْمُكْرَمِ",
+      "opening_verse": false
+    },
+    {
+      "id": "antara-muallaqa-extra-08",
+      "meter": "kamil",
+      "poet": "عنترة بن شداد",
+      "sadr": "كَيْفَ الْمَزَارُ وَقَدْ تَرَبَّعَ أَهْلُهَا",
+      "ajuz": "بِعُنَيْزَتَيْنِ وَأَهْلُنَا بِالْغَيْلَمِ",
+      "opening_verse": false
+    },
+    {
+      "id": "antara-muallaqa-extra-10",
+      "meter": "kamil",
+      "poet": "عنترة بن شداد",
+      "sadr": "أَوْ رَوْضَةً أُنُفًا تَضَمَّنَ نَبْتَهَا",
+      "ajuz": "غَيْثٌ قَلِيلُ الدِّمْنِ لَيْسَ بِمَعْلَمِ",
+      "opening_verse": false
+    },
+    {
+      "id": "shawqi-muallim-extra-01",
+      "meter": "kamil",
+      "poet": "أحمد شوقي",
+      "sadr": "أَعَلِمْتَ أَشْرَفَ أَوْ أَجَلَّ مِنَ الَّذِي",
+      "ajuz": "يَبْنِي وَيُنْشِئُ أَنْفُسًا وَعُقُولَا",
+      "opening_verse": false
+    },
+    {
+      "id": "shawqi-muallim-extra-02",
+      "meter": "kamil",
+      "poet": "أحمد شوقي",
+      "sadr": "سُبْحَانَكَ اللَّهُمَّ خَيْرَ مُعَلِّمٍ",
+      "ajuz": "عَلَّمْتَ بِالْقَلَمِ الْقُرُونَ الْأُولَى",
+      "opening_verse": false
+    },
+    {
+      "id": "shawqi-muallim-extra-03",
+      "meter": "kamil",
+      "poet": "أحمد شوقي",
+      "sadr": "أَخْرَجْتَ هَذَا الْعَقْلَ مِنْ ظُلُمَاتِهِ",
+      "ajuz": "وَهَدَيْتَهُ النُّورَ الْمُبِينَ سَبِيلَا",
+      "opening_verse": false
+    },
+    {
+      "id": "shawqi-muallim-extra-05",
+      "meter": "kamil",
+      "poet": "أحمد شوقي",
+      "sadr": "أَرْسَلْتَ بِالتَّوْرَاةِ مُوسَى مُرْشِدًا",
+      "ajuz": "وَابْنَ الْبَتُولِ فَعَلَّمَ الْإِنْجِيلَا",
+      "opening_verse": false
+    },
+    {
+      "id": "shawqi-muallim-extra-07",
+      "meter": "kamil",
+      "poet": "أحمد شوقي",
+      "sadr": "عَلَّمْتَ يُونَانًا وَمِصْرَ فَزَالَتَا",
+      "ajuz": "عَنْ كُلِّ شَمْسٍ مَا تُرِيدُ أُفُولَا",
+      "opening_verse": false
+    },
+    {
+      "id": "shawqi-muallim-extra-09",
+      "meter": "kamil",
+      "poet": "أحمد شوقي",
+      "sadr": "مِنْ مَشْرِقِ الْأَرْضِ الشُّمُوسُ تَظَاهَرَتْ",
+      "ajuz": "مَا بَالُ مَغْرِبِهَا عَلَيْهِ أُدِيلَا",
+      "opening_verse": false
+    },
+    {
+      "id": "shawqi-muallim-extra-10",
+      "meter": "kamil",
+      "poet": "أحمد شوقي",
+      "sadr": "يَا أَرْضُ مُذْ فَقَدَ الْمُعَلِّمُ نَفْسَهُ",
+      "ajuz": "بَيْنَ الشُّمُوسِ وَبَيْنَ شَرْقِكِ حِيلَا",
+      "opening_verse": false
+    },
+    {
+      "id": "shawqi-muallim-extra-11",
+      "meter": "kamil",
+      "poet": "أحمد شوقي",
+      "sadr": "ذَهَبَ الَّذِينَ حَمَوْا حَقِيقَةَ عِلْمِهِمْ",
+      "ajuz": "وَاسْتَعْذَبُوا فِيهَا الْعَذَابَ وَبِيلَا",
+      "opening_verse": false
+    },
+    {
+      "id": "shawqi-muallim-extra-12",
+      "meter": "kamil",
+      "poet": "أحمد شوقي",
+      "sadr": "إِنَّ الشَّجَاعَةَ فِي الْقُلُوبِ كَثِيرَةٌ",
+      "ajuz": "وَوَجَدْتُ شُجْعَانَ الْعُقُولِ قَلِيلَا",
+      "opening_verse": false
+    },
+    {
+      "id": "shawqi-muallim-extra-13",
+      "meter": "kamil",
+      "poet": "أحمد شوقي",
+      "sadr": "لَوْ كُنْتُ أَعْتَقِدُ الصَّلِيبَ وَخَطْبَهُ",
+      "ajuz": "لَأَقَمْتُ مِنْ صَلْبِ الْمَسِيحِ دَلِيلَا",
+      "opening_verse": false
+    },
+    {
+      "id": "abu-tammam-sayf-extra-01",
+      "meter": "basit",
+      "poet": "أبو تمام",
+      "sadr": "بِيضُ الصَّفَائِحِ لَا سُودُ الصَّحَائِفِ فِي",
+      "ajuz": "مُتُونِهِنَّ جَلَاءُ الشَّكِّ وَالرِّيَبِ",
+      "opening_verse": false
+    },
+    {
+      "id": "abu-tammam-sayf-extra-02",
+      "meter": "basit",
+      "poet": "أبو تمام",
+      "sadr": "وَالْعِلْمُ فِي شُهُبِ الْأَرْمَاحِ لَامِعَةً",
+      "ajuz": "بَيْنَ الْخَمِيسَيْنِ لَا فِي السَّبْعَةِ الشُّهُبِ",
+      "opening_verse": false
+    },
+    {
+      "id": "abu-tammam-sayf-extra-03",
+      "meter": "basit",
+      "poet": "أبو تمام",
+      "sadr": "أَيْنَ الرِّوَايَةُ بَلْ أَيْنَ النُّجُومُ وَمَا",
+      "ajuz": "صَاغُوهُ مِنْ زُخْرُفٍ فِيهَا وَمِنْ كَذِبِ",
+      "opening_verse": false
+    },
+    {
+      "id": "abu-tammam-sayf-extra-04",
+      "meter": "basit",
+      "poet": "أبو تمام",
+      "sadr": "تَخَرُّصًا وَأَحَادِيثًا مُلَفَّقَةً",
+      "ajuz": "لَيْسَتْ بِنَبْعٍ إِذَا عُدَّتْ وَلَا غَرَبِ",
+      "opening_verse": false
+    },
+    {
+      "id": "abu-tammam-sayf-extra-05",
+      "meter": "basit",
+      "poet": "أبو تمام",
+      "sadr": "عَجَائِبًا زَعَمُوا الْأَيَّامَ مُجْفِلَةً",
+      "ajuz": "عَنْهُنَّ فِي صَفَرِ الْأَصْفَارِ أَوْ رَجَبِ",
+      "opening_verse": false
+    },
+    {
+      "id": "abu-tammam-sayf-extra-06",
+      "meter": "basit",
+      "poet": "أبو تمام",
+      "sadr": "وَخَوَّفُوا النَّاسَ مِنْ دَهْيَاءَ مُظْلِمَةٍ",
+      "ajuz": "إِذَا بَدَا الْكَوْكَبُ الْغَرْبِيُّ ذُو الذَّنَبِ",
+      "opening_verse": false
+    },
+    {
+      "id": "abu-tammam-sayf-extra-09",
+      "meter": "basit",
+      "poet": "أبو تمام",
+      "sadr": "لَوْ بَيَّنَتْ قَطُّ أَمْرًا قَبْلَ مَوْقِعِهِ",
+      "ajuz": "لَمْ تُخْفِ مَا حَلَّ بِالْأَوْثَانِ وَالصُّلُبِ",
+      "opening_verse": false
+    },
+    {
+      "id": "abu-tammam-sayf-extra-10",
+      "meter": "basit",
+      "poet": "أبو تمام",
+      "sadr": "فَتْحُ الْفُتُوحِ تَعَالَى أَنْ يُحِيطَ بِهِ",
+      "ajuz": "نَظْمٌ مِنَ الشِّعْرِ أَوْ نَثْرٌ مِنَ الْخُطَبِ",
+      "opening_verse": false
+    },
+    {
+      "id": "abu-tammam-sayf-extra-11",
+      "meter": "basit",
+      "poet": "أبو تمام",
+      "sadr": "فَتْحٌ تَفَتَّحُ أَبْوَابُ السَّمَاءِ لَهُ",
+      "ajuz": "وَتَبْرُزُ الْأَرْضُ فِي أَثْوَابِهَا الْقُشُبِ",
+      "opening_verse": false
+    },
+    {
+      "id": "mutanabbi-harr-qalbah-extra-01",
+      "meter": "basit",
+      "poet": "المتنبي",
+      "sadr": "مَا لِي أُكَتِّمُ حُبًّا قَدْ بَرَى جَسَدِي",
+      "ajuz": "وَتَدَّعِي حُبَّ سَيْفِ الدَّوْلَةِ الْأُمَمُ",
+      "opening_verse": false
+    },
+    {
+      "id": "mutanabbi-harr-qalbah-extra-02",
+      "meter": "basit",
+      "poet": "المتنبي",
+      "sadr": "إِنْ كَانَ يَجْمَعُنَا حُبٌّ لِغُرَّتِهِ",
+      "ajuz": "فَلَيْتَ أَنَّا بِقَدْرِ الْحُبِّ نَقْتَسِمُ",
+      "opening_verse": false
+    },
+    {
+      "id": "mutanabbi-harr-qalbah-extra-04",
+      "meter": "basit",
+      "poet": "المتنبي",
+      "sadr": "فَكَانَ أَحْسَنَ خَلْقِ اللَّهِ كُلِّهِمِ",
+      "ajuz": "وَكَانَ أَحْسَنَ مَا فِي الْأَحْسَنِ الشِّيَمُ",
+      "opening_verse": false
+    },
+    {
+      "id": "mutanabbi-harr-qalbah-extra-06",
+      "meter": "basit",
+      "poet": "المتنبي",
+      "sadr": "قَدْ نَابَ عَنْكَ شَدِيدُ الْخَوْفِ وَاصْطَنَعَتْ",
+      "ajuz": "لَكَ الْمَهَابَةُ مَا لَا تَصْنَعُ الْبُهَمُ",
+      "opening_verse": false
+    },
+    {
+      "id": "mutanabbi-harr-qalbah-extra-07",
+      "meter": "basit",
+      "poet": "المتنبي",
+      "sadr": "أَلْزَمْتَ نَفْسَكَ شَيْئًا لَيْسَ يَلْزَمُهَا",
+      "ajuz": "أَنْ لَا يُوَارِيَهُمْ أَرْضٌ وَلَا عَلَمُ",
+      "opening_verse": false
+    },
+    {
+      "id": "mutanabbi-harr-qalbah-extra-08",
+      "meter": "basit",
+      "poet": "المتنبي",
+      "sadr": "أَكُلَّمَا رُمْتَ جَيْشًا فَانْثَنَى هَرَبًا",
+      "ajuz": "تَصَرَّفَتْ بِكَ فِي آثَارِهِ الْهِمَمُ",
+      "opening_verse": false
+    },
+    {
+      "id": "mutanabbi-harr-qalbah-extra-10",
+      "meter": "basit",
+      "poet": "المتنبي",
+      "sadr": "أَمَا تَرَى ظَفَرًا حُلْوًا سِوَى ظَفَرٍ",
+      "ajuz": "تَصَافَحَتْ فِيهِ بِيضُ الْهِنْدِ وَاللِّمَمُ",
+      "opening_verse": false
+    },
+    {
+      "id": "mutanabbi-harr-qalbah-extra-11",
+      "meter": "basit",
+      "poet": "المتنبي",
+      "sadr": "لَيْتَ الْغَمَامَ الَّذِي عِنْدِي صَوَاعِقُهُ",
+      "ajuz": "يُزِيلُهُنَّ إِلَى مَنْ عِنْدَهُ الدِّيَمُ",
+      "opening_verse": false
+    },
+    {
+      "id": "mutanabbi-harr-qalbah-extra-12",
+      "meter": "basit",
+      "poet": "المتنبي",
+      "sadr": "أَرَى النَّوَى يَقْتَضِينِي كُلَّ مَرْحَلَةٍ",
+      "ajuz": "لَا تَسْتَقِلُّ بِهَا الْوَخَّادَةُ الرُّسُمُ",
+      "opening_verse": false
+    },
+    {
+      "id": "mutanabbi-harr-qalbah-extra-13",
+      "meter": "basit",
+      "poet": "المتنبي",
+      "sadr": "لَئِنْ تَرَكْنَ ضُمَيْرًا عَنْ مَيَامِنِنَا",
+      "ajuz": "لَيَحْدُثَنَّ لِمَنْ وَدَّعْتُهُمْ نَدَمُ",
+      "opening_verse": false
+    },
+    {
+      "id": "shabbi-irada-extra-01",
+      "meter": "mutaqarib",
+      "poet": "أبو القاسم الشابي",
+      "sadr": "وَلَا بُدَّ لِلَّيْلِ أَنْ يَنْجَلِي",
+      "ajuz": "وَلَا بُدَّ لِلْقَيْدِ أَنْ يَنْكَسِرْ",
+      "opening_verse": false
+    },
+    {
+      "id": "shabbi-irada-extra-02",
+      "meter": "mutaqarib",
+      "poet": "أبو القاسم الشابي",
+      "sadr": "وَمَنْ لَمْ يُعَانِقْهُ شَوْقُ الْحَيَاةِ",
+      "ajuz": "تَبَخَّرَ فِي جَوِّهَا وَانْدَثَرْ",
+      "opening_verse": false
+    },
+    {
+      "id": "shabbi-irada-extra-03",
+      "meter": "mutaqarib",
+      "poet": "أبو القاسم الشابي",
+      "sadr": "فَوَيْلٌ لِمَنْ لَمْ تَشُقْهُ الْحَيَاةُ",
+      "ajuz": "مِنْ صَفْعَةِ الْعَدَمِ الْمُنْتَصِرْ",
+      "opening_verse": false
+    },
+    {
+      "id": "shabbi-irada-extra-04",
+      "meter": "mutaqarib",
+      "poet": "أبو القاسم الشابي",
+      "sadr": "كَذَلِكَ قَالَتْ لِيَ الْكَائِنَاتُ",
+      "ajuz": "وَحَدَّثَنِي رُوحُهَا الْمُسْتَتِرْ",
+      "opening_verse": false
+    },
+    {
+      "id": "shabbi-irada-extra-05",
+      "meter": "mutaqarib",
+      "poet": "أبو القاسم الشابي",
+      "sadr": "وَدَمْدَمَتِ الرِّيحُ بَيْنَ الْفِجَاجِ",
+      "ajuz": "وَفَوْقَ الْجِبَالِ وَتَحْتَ الشَّجَرْ",
+      "opening_verse": false
+    },
+    {
+      "id": "shabbi-irada-extra-06",
+      "meter": "mutaqarib",
+      "poet": "أبو القاسم الشابي",
+      "sadr": "إِذَا مَا طَمَحْتُ إِلَى غَايَةٍ",
+      "ajuz": "رَكِبْتُ الْمُنَى وَنَسِيتُ الْحَذَرْ",
+      "opening_verse": false
+    },
+    {
+      "id": "shabbi-irada-extra-07",
+      "meter": "mutaqarib",
+      "poet": "أبو القاسم الشابي",
+      "sadr": "وَلَمْ أَتَجَنَّبْ وُعُورَ الشِّعَابِ",
+      "ajuz": "وَلَا كُبَّةَ اللَّهَبِ الْمُسْتَعِرْ",
+      "opening_verse": false
+    },
+    {
+      "id": "shabbi-irada-extra-08",
+      "meter": "mutaqarib",
+      "poet": "أبو القاسم الشابي",
+      "sadr": "وَمَنْ لَا يُحِبُّ صُعُودَ الْجِبَالِ",
+      "ajuz": "يَعِشْ أَبَدَ الدَّهْرِ بَيْنَ الْحُفَرْ",
+      "opening_verse": false
+    },
+    {
+      "id": "shabbi-irada-extra-09",
+      "meter": "mutaqarib",
+      "poet": "أبو القاسم الشابي",
+      "sadr": "فَعَجَّتْ بِقَلْبِي دِمَاءُ الشَّبَابِ",
+      "ajuz": "وَضَجَّتْ بِصَدْرِي رِيَاحٌ أُخَرْ",
+      "opening_verse": false
+    },
+    {
+      "id": "shabbi-irada-extra-10",
+      "meter": "mutaqarib",
+      "poet": "أبو القاسم الشابي",
+      "sadr": "وَأَطْرَقْتُ أُصْغِي لِقَصْفِ الرُّعُودِ",
+      "ajuz": "وَعَزْفِ الرِّيَاحِ وَوَقْعِ الْمَطَرْ",
+      "opening_verse": false
+    }
+  ]
+}
