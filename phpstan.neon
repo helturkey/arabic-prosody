@@ -1,0 +1,11 @@
+parameters:
+  level: 5
+  paths:
+    - src
+    - bin
+    - tools
+  treatPhpDocTypesAsCertain: false
+  ignoreErrors:
+    # ArabicSupport is an optional, suggested package; class/method existence is intentionally checked at runtime.
+    - message: '#Call to function method_exists\(\) with .ArabicSupport#'
+      path: src/ArabicText.php

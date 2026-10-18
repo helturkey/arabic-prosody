@@ -1,0 +1,249 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+$root = dirname(__DIR__);
+foreach ([$root . '/vendor/autoload.php', $root . '/../../autoload.php'] as $autoload) {
+    if (is_file($autoload)) {
+        require $autoload;
+        $loaded = true;
+        break;
+    }
+}
+if (!isset($loaded)) {
+    spl_autoload_register(static function (string $class) use ($root): void {
+        if (str_starts_with($class, 'Arud\\')) {
+            $file = $root . '/src/' . str_replace('\\', '/', substr($class, 5)) . '.php';
+            if (is_file($file)) {
+                require $file;
+            }
+        }
+    });
+}
+
+use Arud\Analyzer;
+use Arud\AnalysisResult;
+use Arud\MeterCatalog;
+use Arud\PoemAnalysis;
+use Arud\VerseAnalysis;
+
+const ARUD_CLI_VERSION = '1.0.0-rc.1';
+
+function usage(): string
+{
+    return <<<TXT
+    arud — Arabic prosody analyzer
+
+    Usage:
+      arud analyze  "<hemistich>"            [options]
+      arud verse    "<sadr>" "<ajuz>"        [options]
+      arud poem     <file|->                 [options]   (one verse per line "sadr *** ajuz", or two lines per verse)
+      arud auto     "<text>"                 [options]   (shape detected: shatr / bayt / multi-line poem)
+      arud free     "<line>"                 [options]   (free-verse / tafʿīla line)
+      arud scan     "<text>"                 [--infer] [--json]
+      arud meters                            [--json]
+      arud resolve  "<meter name>"           [--json]    (map an encyclopedia meter name to a supported form)
+
+    Options:
+      --json            machine-readable output
+      --infer           assume unmarked letters are vowelled (less reliable)
+      --side=VALUE      for analyze: sadr | ajuz | either (default)
+      --limit=N         number of candidates (default 5, max 50)
+      --no-approximate  disable edit-distance fallback
+      --classical-only  ignore rare forms
+      -h, --help        show this help
+      --version
+
+    Exit codes: 0 ok · 1 usage / input error · 3 no confident meter (only with --strict)
+    TXT . "\n";
+}
+
+/** @param list<string> $argv */
+function parse(array $argv): array
+{
+    $pos = [];
+    $opt = [];
+    foreach (array_slice($argv, 1) as $a) {
+        if (str_starts_with($a, '--')) {
+            $kv = explode('=', substr($a, 2), 2);
+            $opt[$kv[0]] = $kv[1] ?? true;
+        } elseif ($a === '-h') {
+            $opt['help'] = true;
+        } else {
+            $pos[] = $a;
+        }
+    }
+
+    return [$pos, $opt];
+}
+
+function out(mixed $data, bool $json): void
+{
+    if ($json) {
+        echo json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_THROW_ON_ERROR), "\n";
+        return;
+    }
+    echo render($data);
+}
+
+function feetLine(array $feet): string
+{
+    $parts = [];
+    foreach ($feet as $f) {
+        $name = (string) ($f['name_ar'] ?? '?');
+        if (($f['variant'] ?? 's') !== 's' && isset($f['rule_ar'])) {
+            $name .= ' (' . $f['rule_ar'] . ')';
+        }
+        if (($f['status'] ?? 'ok') !== 'ok') {
+            $name .= ' [' . $f['status'] . ']';
+        }
+        $parts[] = $name;
+    }
+
+    return implode(' · ', $parts);
+}
+
+function candLine(array $c): string
+{
+    $s = sprintf("  %-14s %-12s score=%.2f  %s", $c['label_ar'] ?? $c['name_ar'], $c['match_type'], $c['score'], $c['tier'] === 'rare' ? '[rare] ' : '');
+    $s .= isset($c['modifications']) && $c['modifications'] !== [] ? implode('، ', $c['modifications']) : 'سالم';
+    $s .= "\n";
+    if (isset($c['feet']['sadr'])) {
+        $s .= '      صدر: ' . feetLine($c['feet']['sadr']) . "\n      عجز: " . feetLine($c['feet']['ajuz']) . "\n";
+    } else {
+        $s .= '      ' . feetLine($c['feet'] ?? []) . "\n";
+    }
+
+    return $s;
+}
+
+function render(mixed $r): string
+{
+    if ($r instanceof AnalysisResult) {
+        $o = "pattern: {$r->pattern}\ncoverage: {$r->diacriticCoverage}  confidence: {$r->confidence}\n";
+        foreach ($r->candidates as $c) {
+            $o .= candLine($c);
+        }
+        foreach ($r->warnings as $w) {
+            $o .= "  ! {$w}\n";
+        }
+
+        return $o;
+    }
+    if ($r instanceof VerseAnalysis) {
+        $o = "sadr: {$r->sadr->pattern}\najuz: {$r->ajuz->pattern}\nconfidence: {$r->confidence}\n";
+        foreach ($r->candidates as $c) {
+            $o .= candLine($c) . ($c['tasri'] ?? false ? "      (تصريع)\n" : '');
+        }
+        foreach ($r->warnings as $w) {
+            $o .= "  ! {$w}\n";
+        }
+
+        return $o;
+    }
+    if ($r instanceof PoemAnalysis) {
+        $o = sprintf("verses: %d  dominant: %s (%s)  consistency: %.0f%%  confidence: %s\n", count($r->verses), $r->dominantMeter ?? '-', $r->dominantForm ?? '-', $r->consistency * 100, $r->confidence);
+        foreach ($r->meters as $m) {
+            $o .= sprintf("  %-10s %d/%d verses (exclusive %d)\n", $m['name_ar'], $m['verses_matched'], count($r->verses), $m['verses_exclusive']);
+        }
+        if ($r->deviations !== []) {
+            $o .= '  deviations: #' . implode(', #', $r->deviations) . "\n";
+        }
+        foreach ($r->warnings as $w) {
+            $o .= "  ! {$w}\n";
+        }
+
+        return $o;
+    }
+
+    return var_export($r, true) . "\n";
+}
+
+[$pos, $opt] = parse($argv);
+if (isset($opt['help']) || $pos === [] && !isset($opt['version'])) {
+    echo usage();
+    exit(isset($opt['help']) ? 0 : 1);
+}
+if (isset($opt['version'])) {
+    echo ARUD_CLI_VERSION, "\n";
+    exit(0);
+}
+
+$json = isset($opt['json']);
+$limit = isset($opt['limit']) ? (int) $opt['limit'] : 5;
+$infer = isset($opt['infer']);
+$analyzer = new Analyzer(!isset($opt['classical-only']), !isset($opt['no-approximate']));
+$cmd = array_shift($pos);
+
+try {
+    switch ($cmd) {
+        case 'analyze':
+            if (count($pos) !== 1) {
+                throw new InvalidArgumentException('analyze needs exactly one hemistich.');
+            }
+            out($analyzer->analyze($pos[0], $limit, $infer, is_string($opt['side'] ?? null) ? $opt['side'] : 'either'), $json);
+            break;
+        case 'verse':
+            if (count($pos) !== 2) {
+                throw new InvalidArgumentException('verse needs <sadr> and <ajuz>.');
+            }
+            out($analyzer->analyzeVerse($pos[0], $pos[1], $limit, $infer), $json);
+            break;
+        case 'poem':
+            $path = $pos[0] ?? '-';
+            $text = $path === '-' ? stream_get_contents(STDIN) : (is_file($path) ? file_get_contents($path) : false);
+            if (!is_string($text)) {
+                throw new InvalidArgumentException("Cannot read '{$path}'.");
+            }
+            out($analyzer->analyzePoem($text, $limit, $infer), $json);
+            break;
+        case 'auto':
+            if (count($pos) !== 1) {
+                throw new InvalidArgumentException('auto needs one text argument.');
+            }
+            out($analyzer->analyzeAuto($pos[0], $limit, $infer), $json);
+            break;
+        case 'free':
+            if (count($pos) !== 1) {
+                throw new InvalidArgumentException('free needs one line.');
+            }
+            out($analyzer->analyzeFreeVerse($pos[0], $limit, $infer), $json);
+            break;
+        case 'scan':
+            if (count($pos) !== 1) {
+                throw new InvalidArgumentException('scan needs one text argument.');
+            }
+            $scan = $analyzer->scan($pos[0], $infer);
+            out($json ? $scan : "pattern: {$scan['pattern']}\ncoverage: {$scan['coverage']}\n", $json);
+            break;
+        case 'meters':
+            $rows = [];
+            foreach (MeterCatalog::all() as $key => $m) {
+                foreach ($m['forms'] as $f) {
+                    $rows[] = ['id' => $f['id'], 'name_ar' => $f['display_ar'], 'tier' => $f['tier'], 'shape' => $f['shape']];
+                }
+            }
+            if ($json) {
+                out($rows, true);
+            } else {
+                foreach ($rows as $r) {
+                    printf("%-20s %-18s %-9s %s\n", $r['id'], $r['name_ar'], $r['tier'], $r['shape']);
+                }
+            }
+            break;
+        case 'resolve':
+            if (count($pos) !== 1) {
+                throw new InvalidArgumentException('resolve needs one meter name.');
+            }
+            $row = MeterCatalog::resolveName($pos[0]);
+            out($row ?? ['name_ar' => $pos[0], 'status' => 'unknown', 'form_id' => null, 'note' => ''], $json);
+            break;
+        default:
+            fwrite(STDERR, "Unknown command '{$cmd}'.\n" . usage());
+            exit(1);
+    }
+} catch (InvalidArgumentException $e) {
+    fwrite(STDERR, 'error: ' . $e->getMessage() . "\n");
+    exit(1);
+}
