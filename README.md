@@ -72,6 +72,9 @@ Performance (PHP 8.3, laptop-class CPU): ≈0.7 ms per verse when an exact parse
 
 Inputs are validated (UTF-8, ≤ 2000 bytes per hemistich, ≤ 2000 verses, ≤ 2 MB total). The library itself does no `eval`, filesystem or network access. See [SECURITY.md](SECURITY.md).
 
+## Source:
+This package started as part of the core of the Arabic prosody analysis behind [موسوعة الشعراء](https://poetspedia.com), then became open source to help Arabic poetry developers, researchers, and linguists.
+
 ## License
 
 MIT. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
